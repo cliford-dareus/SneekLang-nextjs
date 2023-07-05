@@ -6,6 +6,7 @@ import TranslationResult from "@/components/TranslationResult";
 
 const Page: NextPageWithLayout = () => {
   const [result, setResult] = useState<ResultType | null>(null);
+  console.log(result)
 
   return (
     <>
