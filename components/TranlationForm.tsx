@@ -38,12 +38,12 @@ const TranlationForm = (props: Props) => {
   const formProps = { register, errors };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Formfield {...formProps} name="from" />
-      <Formfield {...formProps} name="to" />
+    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center">
+      <Formfield {...formProps} name="from" defaultValue="en"/>
+      <Formfield {...formProps} name="to" defaultValue="fr"/>
       <FormTextArea {...formProps} name="text" />
 
-      <button className="">Translate</button>
+      <button className="py-2 px-4 bg-white text-black rounded-md self-end mt-2">Translate</button>
     </form>
   );
 };

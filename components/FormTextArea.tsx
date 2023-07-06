@@ -11,6 +11,7 @@ export type FieldsInputsProps = {
   register: UseFormRegister<IFields>;
   errors: FieldErrors;
   name: "from" | "to" | "text";
+  defaultValue?: string;
 };
 
 const FormTextArea = ({ register, errors, name }: FieldsInputsProps) => {
