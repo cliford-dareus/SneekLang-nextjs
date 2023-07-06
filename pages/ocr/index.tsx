@@ -3,16 +3,16 @@ import React, { ReactElement } from "react";
 
 type Props = {};
 
-const Dictionary = () => {
+const Ocr = (props: Props) => {
   return (
     <div className="bg-green-700 flex-1 p-4 rounded-tr-xl rounded-tl-xl">
-      Dictionary
+      Picture
     </div>
   );
 };
 
-Dictionary.getLayout = function getLayout(Dictionary: ReactElement) {
-  return <Layout>{Dictionary}</Layout>;
+Ocr.getLayout = function getLayout(Ocr: ReactElement) {
+  return <Layout>{Ocr}</Layout>;
 };
 
-export default Dictionary;
+export default Ocr;
