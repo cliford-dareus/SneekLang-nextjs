@@ -7,7 +7,7 @@ type Props = {
   setResult: Dispatch<SetStateAction<any | string>>;
 };
 
-type InputFieldType = {
+export type InputFieldType = {
   from: string;
   to: string;
   text: string;
@@ -43,7 +43,7 @@ const TranlationForm = (props: Props) => {
       <Formfield {...formProps} name="to" defaultValue="fr"/>
       <FormTextArea {...formProps} name="text" />
 
-      <button className="py-2 px-4 bg-white text-black rounded-md self-end mt-2">Translate</button>
+      <button className="py-1 px-4 bg-white text-black rounded-md self-end mt-2">Translate</button>
     </form>
   );
 };
