@@ -1,4 +1,4 @@
-import Formfield from "@/components/Formfield";
+import Formfield from "@/components/UI/Formfield";
 import { Layout } from "@/components/Layout";
 import { InputFieldType } from "@/components/TranlationForm";
 import Bot from "@/components/UI/Bot";
