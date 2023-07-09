@@ -31,7 +31,7 @@ const TranlationForm = (props: StateProps) => {
       from: inputData.from,
       to: inputData.to,
       originalText: inputData.text,
-      translatedText: data.translations.translatedText,
+      translatedText: data?.translations.translatedText,
     });
   };
 
