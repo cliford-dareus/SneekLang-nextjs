@@ -15,7 +15,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
         <link rel="manifest" href="/site.manifest" />
         <link rel="apple-touch-icon" href="/apple-icon-180.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="viewport" content="initial-scale=1, viewport-fit=cover"/>
+        <meta name="viewport" content="initial-scale=1, viewport-fit=contain, user-scalable=no"/>
         <meta name="apple-mobile-web-status-bar-style" content="black-translucent"/>
         <link
           rel="apple-touch-startup-image"
@@ -169,7 +169,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
         />
       </Head>
       <div
-        className={`bg-black h-screen min-h-screen text-white flex flex-col overflow-hidden font-sans ${sarpanch.variable} font-sans`}
+        className={`bg-black max-h-screen h-screen text-white flex flex-col overflow-hidden font-sans ${sarpanch.variable} font-sans`}
       >
         <Navbar />
         <main className="h-full flex flex-col relative">
