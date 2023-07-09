@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Definitions = ({ meanings }: Props) => {
-  console.log(meanings);
+//   console.log(meanings);
 
   const meaningsByType = Object.keys(meanings).map((partOfSpeech) => {
     const item = meanings[partOfSpeech];
@@ -15,12 +15,13 @@ const Definitions = ({ meanings }: Props) => {
       title: partOfSpeech,
       content: item,
     };
+    console.log(singleItem);
 
     return singleItem;
   });
 
   return (
-    <div className="h-[450px] py-2">
+    <div className="h-[450px]">
       {meaningsByType &&
         meaningsByType.length > 0 &&
         meaningsByType.map((meanings) => <Definition content={meanings} />)}
