@@ -1,19 +1,19 @@
 import React, { Dispatch, SetStateAction } from "react";
-import Formfield from "./Formfield";
-import FormTextArea from "./FormTextArea";
+import Formfield from "./UI/Formfield";
+import FormTextArea from "./UI/FormTextArea";
 import { useForm, SubmitHandler } from "react-hook-form";
 
-type Props = {
+export type StateProps = {
   setResult: Dispatch<SetStateAction<any | string>>;
 };
 
-type InputFieldType = {
+export type InputFieldType = {
   from: string;
   to: string;
   text: string;
 };
 
-const TranlationForm = (props: Props) => {
+const TranlationForm = (props: StateProps) => {
   const {
     register,
     handleSubmit,
@@ -43,7 +43,7 @@ const TranlationForm = (props: Props) => {
       <Formfield {...formProps} name="to" defaultValue="fr"/>
       <FormTextArea {...formProps} name="text" />
 
-      <button className="py-2 px-4 bg-white text-black rounded-md self-end mt-2">Translate</button>
+      <button className="py-1 px-4 bg-white text-black rounded-md self-end mt-2">Translate</button>
     </form>
   );
 };

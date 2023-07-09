@@ -1,7 +1,6 @@
 import { ResultType } from "@/types";
 import React, { Dispatch, SetStateAction } from "react";
-import BotImage from "@/public/Group 2.png";
-import Image from "next/image";
+import Bot from "./UI/Bot";
 
 type Props = {
   result: ResultType;
@@ -25,22 +24,10 @@ const TranslationResult = (props: Props) => {
         </div>
       </div>
 
-      <div className="mt-4 isolate">
-        <div className="w-[65%] p-2 bg-white text-black rounded-md mb-4">
-          Tap on a word below to look up its definition
-        </div>
+      <Bot text="Tap on a word below to look up its definition"/>
 
-        <div className="h-[100px] bg-black rounded-md relative">
-          <Image
-            className="absolute -top-20 right-4 rotate-[-8deg] z-[-1]"
-            src={BotImage}
-            alt=""
-            width={75}
-          />
-        </div>
-      </div>
       <button
-        className="py-2 px-4 bg-white rounded-md text-black absolute -top-4 right-4"
+        className="py-1 px-4 bg-white rounded-md text-black absolute -top-4 right-4"
         onClick={() => props.setResult(null)}
       >
         close

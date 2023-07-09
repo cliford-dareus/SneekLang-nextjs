@@ -17,7 +17,7 @@ export type FieldsInputsProps = {
 const FormTextArea = ({ register, errors, name }: FieldsInputsProps) => {
   return (
     <textarea
-      className="w-full outline-none border-none rounded-md text-black p-4"
+      className="w-full outline-none border-none rounded-md text-black bg-slate-300 p-4"
       {...register(name, { required: true })}
     ></textarea>
   );
