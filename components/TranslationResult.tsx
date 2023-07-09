@@ -27,7 +27,7 @@ const TranslationResult = (props: Props) => {
       <Bot text="Tap on a word below to look up its definition"/>
 
       <button
-        className="py-2 px-4 bg-white rounded-md text-black absolute -top-4 right-4"
+        className="py-1 px-4 bg-white rounded-md text-black absolute -top-4 right-4"
         onClick={() => props.setResult(null)}
       >
         close

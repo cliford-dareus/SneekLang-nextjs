@@ -3,7 +3,7 @@ import Formfield from "./UI/Formfield";
 import FormTextArea from "./UI/FormTextArea";
 import { useForm, SubmitHandler } from "react-hook-form";
 
-type Props = {
+export type StateProps = {
   setResult: Dispatch<SetStateAction<any | string>>;
 };
 
@@ -13,7 +13,7 @@ export type InputFieldType = {
   text: string;
 };
 
-const TranlationForm = (props: Props) => {
+const TranlationForm = (props: StateProps) => {
   const {
     register,
     handleSubmit,

@@ -1,4 +1,7 @@
+import DictionaryFrom from "@/components/DictionaryFrom";
+import DictionaryResult from "@/components/DictionaryResult";
 import { Layout } from "@/components/Layout";
+import Bot from "@/components/UI/Bot";
 import React, { ReactElement, useState } from "react";
 
 type Props = {};
@@ -8,19 +11,26 @@ const Dictionary = () => {
 
   return (
     <>
-      {!true && <div className="absolute inset-0 bg-black opacity-[.5]"></div>}
+      {result && <div className="absolute inset-0 bg-black opacity-[.5]"></div>}
       <div
-        className={`bg-green-700 ${
-          !true ? "flex-1" : "absolute bottom-0 w-full"
+        className={`bg-green-700 max-h-[650px] overflow-hidden ${
+          !result ? "" : "absolute bottom-0 w-full"
         } p-4 rounded-tr-xl rounded-tl-xl`}
       >
         <h1 className="text-center text-3xl">
-          {true ? "Dictionary" : "Result"}
+          {!result ? "Dictionary" : "Result"}
         </h1>
+        {!result && (
+          <>
+            <p>Enter an English word to define...</p>
+            <div className="mt-4 mb-8">
+              <DictionaryFrom setResult={setResult} />
+            </div>
+            <Bot text="Sorry! we only have English Dictionary for now..." />
+          </>
+        )}
 
-        <div className="mt-4">
-          
-        </div>
+        <DictionaryResult result={result}/>
       </div>
     </>
   );

@@ -87,7 +87,7 @@ const Ocr = () => {
               videoConstraints={videoConstraints}
             />
             <button
-              className="py-2 px-4 bg-white text-black self-end rounded-md mt-2 "
+              className="py-1 px-4 bg-white text-black self-end rounded-md mt-2 "
               onClick={capture}
             >
               Capture photo

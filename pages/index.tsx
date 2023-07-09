@@ -11,7 +11,7 @@ const Page: NextPageWithLayout = () => {
     <>
       {result && <div className="absolute inset-0 bg-black opacity-[.5]"></div>}
       <div
-        className={`bg-green-700 ${
+        className={`bg-green-700 md:w-[700px] md:m-auto ${
           !result ? "flex-1" : "absolute bottom-0 w-full"
         } p-4 rounded-tr-xl rounded-tl-xl`}
       >
