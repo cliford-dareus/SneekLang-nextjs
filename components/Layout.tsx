@@ -12,7 +12,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
     <>
       <Head>
         <title>SneekLang</title>
-        <link rel="manifest" href="/site.manifest" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="apple-touch-icon" href="/apple-icon-180.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="initial-scale=1, viewport-fit=contain, user-scalable=no"/>
