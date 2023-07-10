@@ -6,6 +6,7 @@ import Image from "next/image";
 import BotImage from "@/public/Group 2.png";
 import HeroText from "./UI/HeroText";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
@@ -179,14 +180,24 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
       >
         <Navbar />
         <main className="h-full flex flex-col relative">
-          <div className="h-1/2 p-4 flex items-center relative isolate overflow-hidden">
+          <div className="h-1/2 p-4 max-w-[1100px] md:w-full mx-auto flex items-center relative isolate overflow-hidden">
             <HeroText />
-            <Image
-              className="absolute right-[-6em] top-10 rotate-[-30deg] z-[-1] md:w-[250px]"
-              src={BotImage}
-              alt="Bot image"
-              height={360}
-            />
+            <motion.div
+              className="absolute right-[-6em] md:right-[-13em] md:top-14 top-10"
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                type: "spring",
+              }}
+            >
+              <Image
+                className=" rotate-[-30deg] md:w-[350px]"
+                src={BotImage}
+                alt="Bot image"
+                height={360}
+              />
+            </motion.div>
           </div>
           {children}
         </main>
