@@ -5,7 +5,7 @@ type Props = {};
 
 function MobileNavbar({}: Props) {
   return (
-    <div className="h-[80px] w-full p-4">
+    <div className="h-[80px] w-full p-4 md:hidden">
       <ul className="h-full flex gap-4 items-center justify-between">
         <li className="">
           <Link href="/ocr">Picture</Link>
@@ -17,7 +17,7 @@ function MobileNavbar({}: Props) {
           <Link href="/dictionary">Dictionary</Link>
         </li>
         <li>
-          <Link href="">About</Link>
+          <Link href="/about">About</Link>
         </li>
       </ul>
     </div>

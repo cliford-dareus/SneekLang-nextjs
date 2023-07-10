@@ -50,14 +50,16 @@ const DictionaryResult = ({ result }: Props) => {
   };
 
   return (
-    <div className="" >
+    <div className="">
       <h2 className="text-xl font-semibold">
         {result?.word} {"  "}{" "}
         <span className="text-base">{result?.phonetic}</span>
       </h2>
 
       <div className=" h-full overflow-scroll">
-        {result && <Definitions meanings={groupSimilarMeanings(result?.meanings)}/>}
+        {result && (
+          <Definitions meanings={groupSimilarMeanings(result?.meanings)} />
+        )}
       </div>
     </div>
   );

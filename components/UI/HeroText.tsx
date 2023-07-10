@@ -1,14 +1,36 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const variants = {
+  hidden: { y: -100, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const items = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
 
 const HeroText = () => {
   return (
-    <div className="w-[65%] md:max-w-[500px] md:text-center md:m-auto">
-      <p>Hi! I’m Sneek.</p>
-      <p className="text-3xl">
+    <motion.div
+      initial="hidden"
+      animate="show"
+      variants={variants}
+      className="w-[65%] md:max-w-[500px] md:text-center md:m-auto"
+    >
+      <motion.p variants={items}>Hi! I’m Sneek.</motion.p>
+      <motion.p variants={items} className="text-3xl md:text-5xl">
         A bot/Ai train to help you with learning language.
-      </p>
-      <p>How may i help you today?</p>
-    </div>
+      </motion.p>
+      <motion.p variants={items}>How may i help you today?</motion.p>
+    </motion.div>
   );
 };
 

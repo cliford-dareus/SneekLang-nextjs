@@ -38,12 +38,17 @@ const TranlationForm = (props: StateProps) => {
   const formProps = { register, errors };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center">
-      <Formfield {...formProps} name="from" defaultValue="en"/>
-      <Formfield {...formProps} name="to" defaultValue="fr"/>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col items-center"
+    >
+      <Formfield {...formProps} name="from" defaultValue="en" />
+      <Formfield {...formProps} name="to" defaultValue="fr" />
       <FormTextArea {...formProps} name="text" />
 
-      <button className="py-1 px-4 bg-white text-black rounded-md self-end mt-2">Translate</button>
+      <button className="py-1 px-4 bg-white text-black rounded-md self-end mt-2">
+        Translate
+      </button>
     </form>
   );
 };

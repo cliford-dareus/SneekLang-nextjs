@@ -8,7 +8,7 @@ const Formfield = ({
   defaultValue,
 }: FieldsInputsProps) => {
   return (
-    <div className="w-full flex rounded-md overflow-hidden bg-slate-300 px-4 py-[5px] mb-2">
+    <div className="w-full flex rounded-md overflow-hidden bg-white px-4 py-[5px] mb-2">
       <p className="w-[2.5em]">{name}</p>
       <select
         {...register(name)}

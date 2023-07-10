@@ -5,14 +5,13 @@ import Bot from "@/components/UI/Bot";
 import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { easeIn, motion } from "framer-motion";
 
-type Props = {};
 
 const dictionaryVariants = {
   open: {
     height: "550px",
     transition: {
       type: "spring",
-      duration: .5,
+      duration: 0.5,
       stiffness: 20,
     },
   },
@@ -30,9 +29,11 @@ const Dictionary = () => {
       <motion.div
         animate={result ? "open" : "closed"}
         variants={dictionaryVariants}
-        className={`bg-green-700 max-h-[650px] overflow-hidden ${
-          !result ? "flex-1" : "absolute bottom-0 w-full"
-        } p-4 rounded-tr-xl rounded-tl-xl`}
+        className={`bg-green-700 max-h-[650px] mx-auto md:w-[600px] md:left-1/2 overflow-hidden ${
+          !result
+            ? "flex-1"
+            : "absolute bottom-0 md:bottom-[2em] md:-translate-x-1/2"
+        } p-4 md:p-8 rounded-tr-xl rounded-tl-xl md:rounded-br-xl md:rounded-bl-xl`}
       >
         <motion.div>
           <h1 className="text-center text-3xl">
@@ -45,7 +46,14 @@ const Dictionary = () => {
                 <DictionaryFrom setResult={setResult} />
               </div>
 
-              <motion.div initial={{y: 100, opacity: 0}} animate={{y: 0, opacity: 1}}>
+              <motion.div
+                className="mt-4"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                }}
+              >
                 <Bot text="Sorry! we only have English Dictionary for now..." />
               </motion.div>
             </>
