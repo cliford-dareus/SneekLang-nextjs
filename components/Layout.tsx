@@ -17,7 +17,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="viewport"
-          content="initial-scale=1, viewport-fit=cover, user-scalable=no"
+          content="initial-scale=1, viewport-fit=contain, user-scalable=no"
         />
         <meta
           name="apple-mobile-web-status-bar-style"
