@@ -15,7 +15,7 @@ const translationVariants = {
     },
   },
   closed: {
-    height: "385px",
+    height: "380px",
   },
 };
 
@@ -28,7 +28,7 @@ const Page: NextPageWithLayout = () => {
       <motion.div
         animate={result ? "open" : "closed"}
         variants={translationVariants}
-        className={`bg-green-700 max-h-[650px] mx-auto md:w-[600px] md:left-1/2 ${
+        className={`bg-green-700 max-h-[650px] w-full mx-auto md:w-[600px] md:left-1/2 ${
           !result
             ? "flex-1"
             : "absolute bottom-0 md:bottom-[2em]  md:-translate-x-1/2"
