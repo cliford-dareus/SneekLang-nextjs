@@ -26,7 +26,7 @@ const HeroText = () => {
       className="w-[65%] md:max-w-[500px] md:text-center md:m-auto"
     >
       <motion.p variants={items}>Hi! I’m Sneek.</motion.p>
-      <motion.p variants={items} className="text-3xl md:text-5xl">
+      <motion.p variants={items} className="text-[32px] leading-[1] md:text-5xl">
         A bot/Ai train to help you with learning language.
       </motion.p>
       <motion.p variants={items}>How may i help you today?</motion.p>

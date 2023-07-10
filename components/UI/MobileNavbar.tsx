@@ -1,23 +1,62 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 type Props = {};
 
 function MobileNavbar({}: Props) {
+  const router = useRouter();
+
   return (
-    <div className="h-[80px] w-full p-4 md:hidden">
-      <ul className="h-full flex gap-4 items-center justify-between">
-        <li className="">
-          <Link href="/ocr">Picture</Link>
+    <div className="bg-black h-[80px] w-full flex items-center justify-center p-4 md:hidden">
+      <ul className="relative w-full h-full flex gap-4 items-center justify-between">
+        <li className="relative font-bold">
+          <Link
+            className={`${
+              router.pathname === "/ocr"
+                ? "before:content-[''] before:absolute before:bottom-[1.5em] before:w-full before:h-[2px] before:bg-white"
+                : ""
+            }`}
+            href="/ocr"
+          >
+            Picture
+          </Link>
         </li>
-        <li className="">
-          <Link href="/">Translation</Link>
+        <li className="relative font-bold">
+          <Link
+            className={`${
+              router.pathname === "/"
+                ? "before:content-[''] before:absolute before:bottom-[1.5em] before:w-full before:h-[2px] before:bg-white"
+                : ""
+            }`}
+            href="/"
+          >
+            Translation
+          </Link>
         </li>
-        <li>
-          <Link href="/dictionary">Dictionary</Link>
+        <li className="relative font-bold">
+          <Link
+            className={`${
+              router.pathname === "/dictionary"
+                ? "before:content-[''] before:absolute before:bottom-[1.5em] before:w-full before:h-[2px] before:bg-white"
+                : ""
+            }`}
+            href="/dictionary"
+          >
+            Dictionary
+          </Link>
         </li>
-        <li>
-          <Link href="/about">About</Link>
+        <li className="relative font-bold">
+          <Link
+            className={`${
+              router.pathname === "/about"
+                ? "before:content-[''] before:absolute before:bottom-[1.5em] before:w-full before:h-[2px] before:bg-white"
+                : ""
+            }`}
+            href="/about"
+          >
+            About
+          </Link>
         </li>
       </ul>
     </div>

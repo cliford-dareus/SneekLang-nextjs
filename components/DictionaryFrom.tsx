@@ -29,7 +29,7 @@ function DictionaryFrom({ setResult }: StateProps) {
   return (
     <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
       <input
-        className="w-full rounded-md py-2 px-4 text-black outline-none border-none"
+        className="w-full rounded-md py-1 px-4 text-black outline-none border-none"
         type="text"
         {...register("text")}
         placeholder="eg.sky"

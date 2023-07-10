@@ -8,11 +8,11 @@ const Formfield = ({
   defaultValue,
 }: FieldsInputsProps) => {
   return (
-    <div className="w-full flex rounded-md overflow-hidden bg-white px-4 py-[5px] mb-2">
-      <p className="w-[2.5em]">{name}</p>
+    <div className="w-full flex rounded-md overflow-hidden bg-white px-4 py-1 mb-2">
+      <p className="w-[2.5em] text-black font-semibold">{name}</p>
       <select
         {...register(name)}
-        className="w-full outline-none border-none bg-transparent pl-4 text-black"
+        className="w-full outline-none border-none bg-transparent pl-8 text-black"
       >
         <option >
           --Languages--

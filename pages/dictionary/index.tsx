@@ -4,7 +4,7 @@ import { Layout } from "@/components/Layout";
 import Bot from "@/components/UI/Bot";
 import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { easeIn, motion } from "framer-motion";
-
+import { variants } from "@/utils/animations";
 
 const dictionaryVariants = {
   open: {
@@ -36,15 +36,25 @@ const Dictionary = () => {
         } p-4 md:p-8 rounded-tr-xl rounded-tl-xl md:rounded-br-xl md:rounded-bl-xl`}
       >
         <motion.div>
-          <h1 className="text-center text-3xl">
+          <motion.h1
+            initial="hide"
+            animate="show"
+            variants={variants}
+            className="text-center text-[32px] font-bold"
+          >
             {!result ? "Dictionary" : "Result"}
-          </h1>
+          </motion.h1>
           {!result && (
             <>
-              <p>Enter an English word to define...</p>
-              <div className="mt-4 mb-8">
+              <motion.p initial="hide" animate="show" variants={variants}>Enter an English word to define...</motion.p>
+              <motion.div
+                initial="hide"
+                animate="show"
+                variants={variants}
+                className="mt-2 mb-8"
+              >
                 <DictionaryFrom setResult={setResult} />
-              </div>
+              </motion.div>
 
               <motion.div
                 className="mt-4"
@@ -52,6 +62,7 @@ const Dictionary = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{
                   duration: 0.5,
+                  delay: .3
                 }}
               >
                 <Bot text="Sorry! we only have English Dictionary for now..." />

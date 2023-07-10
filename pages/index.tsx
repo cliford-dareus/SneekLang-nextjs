@@ -4,6 +4,7 @@ import type { NextPageWithLayout, ResultType } from "@/types";
 import TranlationForm from "@/components/TranlationForm";
 import TranslationResult from "@/components/TranslationResult";
 import { motion } from "framer-motion";
+import { variants } from "@/utils/animations";
 
 const translationVariants = {
   open: {
@@ -28,17 +29,17 @@ const Page: NextPageWithLayout = () => {
       <motion.div
         animate={result ? "open" : "closed"}
         variants={translationVariants}
-        className={`bg-green-700 max-h-[650px] w-full mx-auto md:w-[600px] md:left-1/2 ${
+        className={`bg-green-700 max-h-[650px] overflow-hidden w-full mx-auto md:w-[600px] md:left-1/2 ${
           !result
             ? "flex-1"
             : "absolute bottom-0 md:bottom-[2em]  md:-translate-x-1/2"
         } p-4 md:p-8 rounded-tr-xl rounded-tl-xl md:rounded-br-xl md:rounded-bl-xl`}
       >
-        <h1 className="text-center text-3xl">
+        <motion.h1 initial="hide" animate="show" variants={variants} className="text-center text-[32px] font-bold">
           {!result ? "Translation" : "Result"}
-        </h1>
+        </motion.h1>
 
-        <motion.div className="mt-4">
+        <motion.div initial="hide" animate="show" variants={variants} className="mt-4">
           {!result ? (
             <TranlationForm setResult={setResult} />
           ) : (

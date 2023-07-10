@@ -70,7 +70,7 @@ const Ocr = () => {
 
   return (
     <div className="bg-green-700 absolute bottom-0 w-full  p-4 rounded-tr-xl rounded-tl-xl">
-      <h1 className="text-center text-3xl">Camera</h1>
+      <h1 className="text-center text-[32px] font-bold">Camera</h1>
 
       <p>Capture an image, you want to translate</p>
       <div className="flex flex-col mt-4 items-center">
