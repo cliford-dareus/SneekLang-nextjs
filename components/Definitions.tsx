@@ -21,7 +21,7 @@ const Definitions = ({ meanings }: Props) => {
   });
 
   return (
-    <div className="h-[450px]">
+    <div className="h-[400px]">
       {meaningsByType &&
         meaningsByType.length > 0 &&
         meaningsByType.map((meanings) => <Definition content={meanings} />)}

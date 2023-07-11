@@ -3,6 +3,7 @@ import { Layout } from "@/components/Layout";
 import { InputFieldType } from "@/components/TranlationForm";
 import Bot from "@/components/UI/Bot";
 import preprocessImage from "@/utils/preprocess";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React, {
   LegacyRef,
@@ -69,7 +70,7 @@ const Ocr = () => {
   const formProps = { register, errors };
 
   return (
-    <div className="bg-green-700 absolute bottom-0 w-full  p-4 rounded-tr-xl rounded-tl-xl">
+    <div className="bg-gradient-to-b from-[#9A6AFF] to-[#000] absolute bottom-0 w-full  p-4 rounded-tr-xl rounded-tl-xl">
       <h1 className="text-center text-[32px] font-bold">Camera</h1>
 
       <p>Capture an image, you want to translate</p>
@@ -145,9 +146,17 @@ const Ocr = () => {
             </div>
           )}
         </>
-
-        <Bot text="Make sure the image captured is clear and legible!" />
-
+        <motion.div
+          className="mt-4"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.3,
+          }}
+        >
+          <Bot text="Make sure the image captured is clear and legible!" />
+        </motion.div>
       </div>
     </div>
   );

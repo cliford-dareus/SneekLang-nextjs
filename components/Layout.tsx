@@ -198,6 +198,10 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
                 height={360}
               />
             </motion.div>
+            <div className="w-[50px] aspect-square bg-[#9A6AFF] absolute -z-10 blur-md -top-8 right-10 opacity-[.5] animate-blob "></div>
+            <div className="w-[70px] rounded-full  aspect-square bg-[#9A6AFF] absolute -z-10 blur-md top-0 opacity-[.6]"></div>
+            <div className="w-[150px] aspect-square bg-[#9A6AFF] absolute -z-10 blur-md left-1/2 opacity-[.5] animate-blob ease-[cubic-bezier(0.07, 0.8, 0.16, 1)]"></div>
+            <div className="w-[80px] rounded-full  aspect-square bg-[#9A6AFF] absolute -z-10 blur-md -bottom-16 left-24 opacity-[.3]"></div>
           </div>
           {children}
         </main>

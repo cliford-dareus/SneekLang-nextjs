@@ -20,14 +20,20 @@ const Definition = ({ content }: Props) => {
               <span className="text-slate-300">
                 {def.example ? `"${def.example}"` : null}
               </span>
+              <span>
+                {def.synonyms.map((syn) => (
+                  <p>synonyms: {syn}</p>
+                ))}
+              </span>
+              <span>
+                {def.antonyms.map((ant) => (
+                  <p>antonyms: {ant}</p>
+                ))}
+              </span>
             </li>
           </>
         ))}
       </ul>
-
-      {content.content.antonyms.map((ant) => (
-        <p>{ant}</p>
-      ))}
     </article>
   );
 };

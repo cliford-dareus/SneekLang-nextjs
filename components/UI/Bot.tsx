@@ -14,7 +14,7 @@ const Bot = ({text, data}: Props) => {
           {text}
         </div>
 
-        <div className="h-[80px] bg-black rounded-md relative">
+        <div className="h-[80px] bg-white rounded-md relative">
           <Image
             className="absolute -top-20 right-4 rotate-[-8deg] z-[-1]"
             src={BotImage}

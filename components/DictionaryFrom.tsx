@@ -1,6 +1,7 @@
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { StateProps } from "./TranlationForm";
+import Button from "./UI/Button";
 
 type Props = {};
 
@@ -34,9 +35,7 @@ function DictionaryFrom({ setResult }: StateProps) {
         {...register("text")}
         placeholder="eg.sky"
       />
-      <button className="py-1 px-4 bg-white text-black rounded-md self-end mt-2">
-        Define
-      </button>
+      <Button text="Define"/>
     </form>
   );
 }

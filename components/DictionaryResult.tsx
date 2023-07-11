@@ -24,8 +24,8 @@ type Meaning = {
 type definitionsType = {
   definition: string;
   example: string;
-  synonyms: string;
-  antonyms: string;
+  synonyms: string[];
+  antonyms: string[];
 };
 
 const DictionaryResult = ({ result }: Props) => {

@@ -12,14 +12,14 @@ const TranslationResult = (props: Props) => {
     <div className="flex flex-col gap-4">
       <div>
         <h3 className="font-[600] text-base mb-1">{props.result.from}</h3>
-        <div className="px-4 py-2 bg-slate-300 rounded-md max-h-[150px] overflow-scroll">
+        <div className="px-4 py-2 bg-white rounded-md max-h-[100px] overflow-scroll">
           <p className="text-black">{props.result.originalText}</p>
         </div>
       </div>
 
       <div>
         <h3 className="font-[600] text-base mb-1">{props.result.to}</h3>
-        <div className="px-4 py-2 bg-slate-300 rounded-md max-h-[150px] overflow-scroll">
+        <div className="px-4 py-2 bg-white rounded-md max-h-[100px] overflow-scroll">
           <p className="text-black">{props.result.translatedText}</p>
         </div>
       </div>
