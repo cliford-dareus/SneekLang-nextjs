@@ -15,7 +15,7 @@ const Definitions = ({ meanings }: Props) => {
       title: partOfSpeech,
       content: item,
     };
-    console.log(singleItem);
+    // console.log(singleItem);
 
     return singleItem;
   });

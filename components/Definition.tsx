@@ -20,16 +20,26 @@ const Definition = ({ content }: Props) => {
               <span className="text-slate-300">
                 {def.example ? `"${def.example}"` : null}
               </span>
-              <span>
-                {def.synonyms.map((syn) => (
-                  <p>synonyms: {syn}</p>
-                ))}
-              </span>
-              <span>
-                {def.antonyms.map((ant) => (
-                  <p>antonyms: {ant}</p>
-                ))}
-              </span>
+              {def.synonyms.length > 0 && (
+                <span className="flex mt-2">
+                  synonyms:{" "}
+                  {def.synonyms.map((syn) => (
+                    <p className="ml-2 border border-green-500 px-3 rounded-3xl cursor-pointer">
+                      {syn}
+                    </p>
+                  ))}
+                </span>
+              )}
+              {def.synonyms.length > 0 && (
+                <span className="flex mt-2">
+                  antonyms:{" "}
+                  {def.antonyms.map((ant) => (
+                    <p className="ml-2 border border-green-500 px-3 rounded-3xl cursor-pointer">
+                      {ant}
+                    </p>
+                  ))}
+                </span>
+              )}
             </li>
           </>
         ))}
