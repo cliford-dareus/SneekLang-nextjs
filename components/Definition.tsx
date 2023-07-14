@@ -21,20 +21,20 @@ const Definition = ({ content }: Props) => {
                 {def.example ? `"${def.example}"` : null}
               </span>
               {def.synonyms.length > 0 && (
-                <span className="flex mt-2">
+                <span className="flex mt-2 flex-wrap items-center">
                   synonyms:{" "}
                   {def.synonyms.map((syn) => (
-                    <p className="ml-2 border border-green-500 px-3 rounded-3xl cursor-pointer">
+                    <p className="ml-2 mt-1 border border-green-500 px-3 rounded-3xl cursor-pointer">
                       {syn}
                     </p>
                   ))}
                 </span>
               )}
-              {def.synonyms.length > 0 && (
-                <span className="flex mt-2">
+              {def.antonyms.length > 0 && (
+                <span className="flex mt-2 flex-wrap items-center">
                   antonyms:{" "}
                   {def.antonyms.map((ant) => (
-                    <p className="ml-2 border border-green-500 px-3 rounded-3xl cursor-pointer">
+                    <p className="ml-2 mt-1 border border-green-500 px-3 rounded-3xl cursor-pointer">
                       {ant}
                     </p>
                   ))}

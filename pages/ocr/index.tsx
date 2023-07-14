@@ -76,7 +76,7 @@ const Ocr = () => {
       <p>Capture an image, you want to translate</p>
       <div className="flex flex-col mt-4 items-center">
         {!imagePath && (
-          <div className="max-h-[192px]">
+          <>
             <Webcam
               className="rounded-md"
               allowFullScreen={true}
@@ -93,7 +93,7 @@ const Ocr = () => {
             >
               Capture photo
             </button>
-          </div>
+          </>
         )}
 
         {imagePath && (
