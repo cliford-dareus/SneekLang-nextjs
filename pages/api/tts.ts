@@ -2,6 +2,16 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 const URL = "https://voicerss-text-to-speech.p.rapidapi.com/";
 
+const languages = {
+  en: "en-us",
+  fr: "fr-fr",
+};
+
+const voices = {
+  en: "amy",
+  fr: "iva",
+};
+
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const { lang, text }= JSON.parse(req.body);
@@ -35,13 +45,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-const languages = {
-    en: "en-us",
-    fr: "fr-fr",
-}
 
-const voices = {
-  en : "amy",
-  fr: "iva"
-}
 
