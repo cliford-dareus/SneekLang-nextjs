@@ -5,6 +5,7 @@ import TranlationForm from "@/components/TranlationForm";
 import TranslationResult from "@/components/TranslationResult";
 import { motion } from "framer-motion";
 import { variants } from "@/utils/animations";
+import Overlay from "@/components/UI/Overlay";
 
 const translationVariants = {
   open: {
@@ -25,7 +26,7 @@ const Page: NextPageWithLayout = () => {
 
   return (
     <>
-      {result && <div className="absolute inset-0 bg-black opacity-[.5]"></div>}
+      {result && <Overlay setResult={setResult}/>}
       <motion.div
         animate={result ? "open" : "closed"}
         variants={translationVariants}

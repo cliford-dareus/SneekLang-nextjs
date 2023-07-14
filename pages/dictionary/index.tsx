@@ -5,6 +5,7 @@ import Bot from "@/components/UI/Bot";
 import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { easeIn, motion } from "framer-motion";
 import { variants } from "@/utils/animations";
+import Overlay from "@/components/UI/Overlay";
 
 const dictionaryVariants = {
   open: {
@@ -21,11 +22,11 @@ const dictionaryVariants = {
 };
 
 const Dictionary = () => {
-  const [result, setResult] = useState();
+  const [result, setResult] = useState(null);
 
   return (
     <>
-      {result && <div className="absolute inset-0 bg-black opacity-[.5]"></div>}
+      {result && <Overlay setResult={setResult}/>}
       <motion.div
         animate={result ? "open" : "closed"}
         variants={dictionaryVariants}
