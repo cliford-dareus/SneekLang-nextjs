@@ -1,19 +1,21 @@
-import React from "react";
+import { Dispatch, SetStateAction } from "react";
 
 type Props = {
   lang: string;
   text: string;
+  setIsPlaying: Dispatch<SetStateAction<any | boolean>>;
+  isPlaying: boolean;
 };
 
-const TTSButton = ({ lang, text }: Props) => {
+const TTSButton = ({ lang, text, setIsPlaying, isPlaying }: Props) => {
   let audio: HTMLAudioElement | null = null;
 
   const playAudio = async () => {
     if (audio !== null) {
-        console.log("Audio already")
       audio.pause();
       audio.currentTime = 0;
     }
+
     const inputData = { lang, text };
     const response = await fetch("/api/tts", {
       method: "POST",
@@ -24,9 +26,15 @@ const TTSButton = ({ lang, text }: Props) => {
 
     audio = new Audio(data);
     audio.play();
+    setIsPlaying(true);
+    audio.addEventListener("ended", () => setIsPlaying(false));
   };
 
-  return <div onClick={() => playAudio()}>Play</div>;
+  return (
+    <button disabled={isPlaying} onClick={() => playAudio()}>
+      Play
+    </button>
+  );
 };
 
 export default TTSButton;

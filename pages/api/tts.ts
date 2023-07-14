@@ -20,10 +20,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
         //@ts-ignore
         hl: `${languages[lang]}`,
+        //@ts-ignore
+        v:`${voices[lang]}`,
         r: "0",
         c: "WAV",
         f: "8khz_8bit_mono",
-        v:"amy",
         b64: "true",
         key: speechKey,
       }),
@@ -37,5 +38,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 const languages = {
     en: "en-us",
     fr: "fr-fr",
+}
+
+const voices = {
+  en : "amy",
+  fr: "iva"
 }
 
