@@ -42,7 +42,7 @@ const TranslationResult = ({ result, setResult }: Props) => {
         </div>
       </div>
 
-      <Bot text="Tap on a word below to look up its definition" />
+      <Bot text="Tap on a word below to look up its definition" data={result} />
 
       {/* <button
         className="py-1 px-4 bg-white rounded-md text-black absolute -top-4 right-4"
