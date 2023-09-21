@@ -1,5 +1,5 @@
 import React from "react";
-import { Group } from "./DictionaryResult";
+import type { Group } from "@/utils/groupMeanings";
 
 type Props = {
   content: {
