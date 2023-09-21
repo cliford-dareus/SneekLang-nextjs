@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import Image from 'next/image'
 import BotImage from "@/public/Group 2.png";
-import ResultType from "@/types";
+import type { ResultType } from "@/types";
 
 type Props = {
     text: string;
