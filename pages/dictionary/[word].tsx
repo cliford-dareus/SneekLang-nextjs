@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactElement } from 'react';
 import { Layout } from '@/components/Layout'
 import { useRouter } from 'next/router';
 import DictionaryResult from '@/components/DictionaryResult'
