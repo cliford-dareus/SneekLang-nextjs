@@ -1,5 +1,5 @@
 import React from "react";
-import { Group } from "./DictionaryResult";
+import type { Group } from "@/utils/groupMeanings";
 import Definition from "./Definition";
 
 type Props = {
@@ -7,7 +7,6 @@ type Props = {
 };
 
 const Definitions = ({ meanings }: Props) => {
-//   console.log(meanings);
 
   const meaningsByType = Object.keys(meanings).map((partOfSpeech) => {
     const item = meanings[partOfSpeech];
@@ -15,7 +14,6 @@ const Definitions = ({ meanings }: Props) => {
       title: partOfSpeech,
       content: item,
     };
-    // console.log(singleItem);
 
     return singleItem;
   });

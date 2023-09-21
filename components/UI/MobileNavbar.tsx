@@ -8,7 +8,7 @@ function MobileNavbar({}: Props) {
   const router = useRouter();
 
   return (
-    <div className="bg-black h-[80px] w-full flex items-center justify-center p-4 md:hidden">
+    <div className="bg-black min-h-[80px] h-[80px] w-full flex items-center justify-center p-4 md:hidden">
       <ul className="relative w-full h-full flex gap-4 items-center justify-between">
         <li className="relative font-bold">
           <Link

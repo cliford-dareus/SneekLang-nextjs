@@ -30,9 +30,9 @@ const Dictionary = () => {
       <motion.div
         animate={result ? "open" : "closed"}
         variants={dictionaryVariants}
-        className={`bg-gradient-to-b from-[#9A6AFF] to-[#000] max-h-[650px] w-full mx-auto md:w-[600px] md:left-1/2 overflow-hidden ${
+        className={`bg-gradient-to-b from-[#9A6AFF] to-[#000] max-h-[50%] w-full mx-auto md:w-[600px] md:left-1/2 overflow-hidden ${
           !result
-            ? "flex-1"
+            ? "h-[50%]"
             : "absolute bottom-0 md:bottom-[2em] md:-translate-x-1/2"
         } p-4 md:p-8 rounded-tr-xl rounded-tl-xl md:rounded-br-xl md:rounded-bl-xl`}
       >

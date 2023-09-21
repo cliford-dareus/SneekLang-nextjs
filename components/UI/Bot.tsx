@@ -11,7 +11,7 @@ const Bot = ({text, data}: Props) => {
   const words = useMemo(() => {
       const word = data?.translatedText.split(" ")
 
-      if(data.length === 1) return data
+      if(data?.length === 1) return data
 
       return word
     }, [data])
@@ -32,7 +32,7 @@ const Bot = ({text, data}: Props) => {
           />
 
           <div className="text-black flex flex-wrap gap-4">
-            {words.map((word, i) => (
+            {words?.map((word, i) => (
               <div className="px-2 py-1 shadow-md rounded-md" key={i}>{word}</div>
             ))}
           </div>
