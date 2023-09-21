@@ -12,7 +12,7 @@ const Bot = ({text, data}: Props) => {
   const words = useMemo(() => {
       const word = data?.translatedText.split(" ")
 
-      if(data?.length === 1) return data
+      if(word?.length === 1) return data
 
       return word
     }, [data])
